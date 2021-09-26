@@ -1,9 +1,14 @@
 require('dotenv').config();
 module.exports = {
   GOOGLE: {
-    CLIENT_ID: process.env.CLIENT_ID,
-    CLIENT_SECRET: process.env.CLIENT_SECRET,
-    CALLBACK_URL: process.env.CALLBACK_URL
+    CLIENT_ID: process.env.GOOGLE_CLIENT_ID,
+    CLIENT_SECRET: process.env.GOOGLE_CLIENT_SECRET,
+    CALLBACK_URL: process.env.GOOGLE_CALLBACK_URL
+  },
+  FB: {
+    CLIENT_ID: process.env.FB_CLIENT_ID,
+    CLIENT_SECRET: process.env.FB_CLIENT_SECRET,
+    CALLBACK_URL: process.env.FN_CALLBACK_URL
   },
   DB: {
     PG_HOST: process.env.PG_HOST,

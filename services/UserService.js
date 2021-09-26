@@ -12,16 +12,17 @@ class UserService {
 
   async thirdPartyLogin(data) {
       try {
-          const { username, google_id, thumbnail } = data;
+          const { username, google_id, thumbnail, facebook_id } = data;
 // the reason we deconstructing it is findOrCreate returns an array of 2 objects user details and created which is a boolean!
           const [ user ] = await this.models.User.findOrCreate({ 
             where: { 
-              username, google_id, thumbnail
+              username, google_id, thumbnail, facebook_id
             }, 
             default: { 
               username,
               google_id,
-              thumbnail
+              thumbnail,
+              facebook_id
             } 
           });
           return user;

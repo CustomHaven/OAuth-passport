@@ -13,11 +13,18 @@ const User = sequelize.define('User', {
   },
   google_id: {
       type: DataTypes.STRING,
-      allowNull: false
+      allowNull: true,
+      defaultValue: null
+  },
+  facebook_id: {
+    type: DataTypes.STRING,
+    allowNull: true,
+    defaultValue: null
   },
   thumbnail: {
     type: DataTypes.STRING,
-    allowNull: true
+    allowNull: true,
+    defaultValue: null
   },
   }, {
     tableName: 'users',
